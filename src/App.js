@@ -9,19 +9,20 @@ export default function App() {
         <div>
             <Navbar/>
             <Hero/>
-            {data.map(item => {
-                return(
-                    <Card 
-                        img={item.coverImg} 
-                        rating={item.stats.rating} 
-                        reviewCount={item.stats.reviewCount} 
-                        location={item.location} 
-                        title={item.title} 
-                        price={item.price}
-                    />
-                )
-            }
-            )}
+            <section className="cards-list">
+                {data.map(item => {
+                    return(
+                        <Card 
+                            img={item.coverImg}
+                            rating={item.stats.rating}
+                            reviewCount={item.stats.reviewCount}
+                            location={item.location}
+                            title={item.title}
+                            price={item.price}
+                        />
+                    )
+                }) }
+            </section>
         </div>
     )
 }

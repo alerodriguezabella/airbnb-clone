@@ -37,7 +37,6 @@ section {
 }
 
 .hero--img {
-    padding: 30px 70px;
     max-width: 1000px;
     align-self: center;
 }
@@ -50,14 +49,30 @@ section {
     margin-top: 0;
 }
 
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+}
+
 .card {
     width: 175px;
     font-size: 12px;
+    flex: 0 0 auto;         
+    display: flex;          
+    flex-direction: column; 
 }
 
 .card--image {
     border-radius:9px;
     width: 100%;
+    margin-bottom: 9px;
+}
+
+.card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card--stats {
@@ -67,4 +82,8 @@ section {
 
 .card--star{
     height: 14px;
+}
+
+.card--price {
+    margin-top: auto;
 }
